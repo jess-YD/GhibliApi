@@ -16,30 +16,30 @@ let pRel = document.createElement("p")
 //console.log(filmTitle.innerHTMl)            //seeing this on our screen when we want
 
 const enter = document.querySelector("#enter");  //id is the # so its looking for it in html thats our submit button
-enter.addEventListener('click', fetchMovie); //its saying to enter and runs a function
+enter.addEventListener('click', fetchMovie); 
 
 function fetchMovie(x) {       //getting run as soon as we click submit button
-    x.preventDefault();        //will stop from refreshing. 
+    x.preventDefault();        
     url = baseURL + "/films";  //we know the url exists and just making it equal
     fetch(url)
-    .then(function(result){     //going to server and fetching the API and turning it to json
+    .then(function(result){     
         return result.json();
     }).then(function(json){
         console.log(json);
-        findTitle(json);           //will run our next function and displaying info to page
+        findTitle(json);           
     });
 
-//Summary from above, is go to films endpoint of studio api and return to readable format
+
 }
-function findTitle(json){            //this is a function called findTitle and we want it to take json. That's what it's saying
+function findTitle(json){            
     console.log(json)  
-    for(i =0; i < json.length; i++) {  //as long as the i is less than json, will run the loop and everytime finish we will add one to i
-     let movieName = json[i].title; //digs in to find the title or of [i] movie
-    if(filmTitle.value.toLowerCase()==movieName.toLowerCase()){ //variable that equals to the element that has the id
-        console.log(movieName)     //so if the value input box equals to the title of the index of the json then if statement will perfom (bottom).
-        movie.appendChild(h4);     //the section to the movie class we are adding ...
+    for(i =0; i < json.length; i++) {  
+     let movieName = json[i].title; 
+    if(filmTitle.value.toLowerCase()==movieName.toLowerCase()){ 
+        console.log(movieName)    
+        movie.appendChild(h4);     
         movie.appendChild(pDir);
-        movie.appendChild(pProd); //these are all the "children"
+        movie.appendChild(pProd); 
         movie.appendChild(pRel);
         movie.appendChild(pRT);
         movie.appendChild(pDesc);

@@ -1,3 +1,32 @@
 body {
+    background: url('http://www.mvdc.us/wp-content/uploads/pin-by-ac290aoc2b7ng-nga-c28dc-on-ghibli-studio-ac298c286-world-pinterest-totoro-wallpaper.jpg')
+
+}
+
+.jumbotron {
+    background: url('https://i.pinimg.com/originals/66/68/91/666891842d5e8faa9ef68eb801759c11.jpg') no-repeat center;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-height: 25rem;
+    color: rgb(243, 240, 240);
     text-align: center;
+    }
+
+
+
+.display-4 {
+    font-size:6.5rem;
+    margin-left: -1.5rem;
+    margin-top: 5rem;
+}
+
+form {
+    margin-left: 28rem;
+}
+.movie {
+    margin-left: 27rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
